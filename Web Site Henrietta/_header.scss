@@ -1,0 +1,105 @@
+.pm-nav-container {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba($pm-white, 0.95);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  .pm-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+
+    .pm-nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .pm-logo img {
+      height: 4rem;
+      width: auto;
+    }
+
+    .pm-nav-content {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      gap: 1rem;
+      padding-top: 1rem;
+
+      @include pm-breakpoint('desktop') {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        padding-top: 0;
+        align-items: center;
+        gap: 2rem;
+      }
+    }
+
+    .pm-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 0;
+
+      @include pm-breakpoint('desktop') {
+        flex-direction: row;
+        gap: 2rem;
+      }
+
+      .pm-nav-link {
+        color: $pm-text-dark;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $pm-accent;
+        }
+      }
+    }
+  }
+
+  .pm-primary-cta {
+    background-color: $pm-accent;
+    color: $pm-white;
+    padding: 0.625rem 1.5rem;
+    border-radius: 9999px;
+    border: none;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: $pm-primary;
+    }
+  }
+
+  .pm-menu-checkbox {
+    display: none;
+
+    &:checked ~ .pm-nav-content {
+      display: flex;
+    }
+  }
+
+  .pm-menu-button {
+    display: block;
+    cursor: pointer;
+    color: $pm-text-dark;
+
+    @include pm-breakpoint('desktop') {
+      display: none;
+    }
+    
+    .pm-icon-bar {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: currentColor;
+      margin: 5px 0;
+    }
+  }
+}

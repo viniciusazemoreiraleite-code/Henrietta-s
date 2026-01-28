@@ -1,0 +1,29 @@
+$pm-bg-light:    #F4F8F9; 
+$pm-primary:     #578693; 
+$pm-white:       #FFFFFF; 
+$pm-accent:      #2FA0AD; 
+$pm-accent-light:#B7D1D7; 
+$pm-text-dark:   #15576A; 
+
+$pm-font-main:    'Montserrat', sans-serif;
+$pm-font-display: 'Playfair Display', serif;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $pm-font-main;
+  background-color: $pm-bg-light;
+  color: $pm-text-dark;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

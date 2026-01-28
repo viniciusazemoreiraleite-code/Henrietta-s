@@ -1,0 +1,24 @@
+.pm-card {
+  background-color: $pm-white;
+  border-radius: 1rem;
+  border: 1px solid rgba($pm-primary, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  .pm-card-header {
+    padding: 1.5rem;
+    .pm-card-title {
+      font-family: $pm-font-display;
+      color: $pm-text-dark;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+
+  .pm-card-content {
+    padding: 0 1.5rem 1.5rem;
+    color: $pm-primary;
+  }
+}

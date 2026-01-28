@@ -1,0 +1,29 @@
+.pm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: $pm-font-main;
+  font-weight: 500;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+
+  &.pm-primary-cta {
+    background-color: $pm-accent;
+    color: $pm-white;
+    &:hover { background-color: $pm-primary; }
+  }
+
+  &.pm-outline-cta {
+    background-color: transparent;
+    border: 2px solid $pm-primary;
+    color: $pm-primary;
+    &:hover {
+      background-color: $pm-primary;
+      color: $pm-white;
+    }
+  }
+}

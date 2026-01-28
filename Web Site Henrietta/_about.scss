@@ -1,0 +1,110 @@
+.pm-about {
+  padding: 4rem 0;
+  background-color: $pm-bg-light;
+
+  @include pm-breakpoint('desktop') {
+    padding: 6rem 0;
+  }
+
+  .pm-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .pm-section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+
+    .pm-display-title {
+      font-family: $pm-font-display;
+      font-size: 2.5rem;
+      color: $pm-text-dark;
+      margin-bottom: 1rem;
+
+      @include pm-breakpoint('desktop') {
+        font-size: 3.5rem;
+      }
+    }
+
+    .pm-section-subtitle {
+      font-size: 1.125rem;
+      color: $pm-primary;
+    }
+  }
+
+    .pm-story-grid {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    @include pm-breakpoint('desktop') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+   .pm-story-card, .pm-contact-card {
+    background-color: $pm-white;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .pm-story-image {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .pm-card-title {
+    font-family: $pm-font-display;
+    font-size: 1.5rem;
+    color: $pm-text-dark;
+    margin-bottom: 1rem;
+
+    &.pm-text-center { text-align: center; margin-bottom: 2rem; }
+  }
+
+  .pm-card-text {
+    color: $pm-primary;
+    line-height: 1.6;
+  }
+
+  .pm-contact-grid {
+    display: grid;
+    gap: 1.5rem;
+
+    @include pm-breakpoint('desktop') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pm-contact-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+
+      .pm-icon {
+        font-size: 1.5rem;
+        color: $pm-accent;
+        flex-shrink: 0;
+      }
+
+      .pm-info-label {
+        color: $pm-text-dark;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+      }
+
+      .pm-info-text {
+        color: $pm-primary;
+        margin: 0;
+      }
+    }
+  }
+}

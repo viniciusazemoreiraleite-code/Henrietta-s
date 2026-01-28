@@ -1,0 +1,115 @@
+.pm-catering {
+  padding: 4rem 0;
+  background-color: $pm-white;
+
+  @include pm-breakpoint('desktop') {
+    padding: 6rem 0;
+  }
+
+  .pm-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .pm-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+
+    @include pm-breakpoint('desktop') {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .pm-order-1-mobile { order: 1; }
+  .pm-order-2-mobile { order: 2; }
+
+  @include pm-breakpoint('desktop') {
+    .pm-order-1-mobile { order: 2; }
+    .pm-order-2-mobile { order: 1; }
+  }
+
+  .pm-catering-image {
+    .pm-image-card {
+      border-radius: 1.5rem;
+      overflow: hidden;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .pm-catering-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .pm-badge {
+      display: inline-block;
+      width: fit-content;
+      padding: 0.5rem 1rem;
+      background-color: $pm-bg-light;
+      color: $pm-accent;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 0.875rem;
+    }
+
+    .pm-display-title {
+      font-family: $pm-font-display;
+      font-size: 2.5rem;
+      color: $pm-text-dark;
+      line-height: 1.2;
+
+      @include pm-breakpoint('desktop') {
+        font-size: 3.5rem;
+      }
+    }
+
+    .pm-text-lead {
+      font-size: 1.125rem;
+      color: $pm-primary;
+    }
+  }
+
+  .pm-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .pm-feature-row {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+
+      .pm-feature-icon-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background-color: $pm-bg-light;
+        border-radius: 50%;
+        font-size: 1.25rem;
+        flex-shrink: 0;
+      }
+
+      .pm-feature-label {
+        font-family: $pm-font-display;
+        font-size: 1.25rem;
+        color: $pm-text-dark;
+        margin-bottom: 0.25rem;
+      }
+
+      p {
+        color: $pm-primary;
+        margin: 0;
+      }
+    }
+  }
+}
