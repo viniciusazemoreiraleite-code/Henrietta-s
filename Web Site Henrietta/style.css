@@ -17,6 +17,10 @@ img {
   display: block;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .pm-nav-container {
   position: sticky;
   top: 0;
