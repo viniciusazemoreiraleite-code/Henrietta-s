@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 @mixin pm-breakpoint($size) {
   @if $size == 'desktop' {
     @media (min-width: 768px) { @content; }
